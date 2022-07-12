@@ -1,0 +1,106 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyNTNeQJ2m31a2AhJFhEbDxB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vedaant31/102003397_lab_eval/blob/main/102003397_lab%20eval\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6wwoQsdjvjTn"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "#entering list elements\n",
+        "print('add list c elements')\n",
+        "list_c = []\n",
+        "n = 10\n",
+        "for i in range(0, n):\n",
+        "    ele = int(input())\n",
+        "  \n",
+        "    list_c.append(ele) # adding the element\n",
+        "\n",
+        "print('add list f elements')\n",
+        "list_f = []\n",
+        "n = 8\n",
+        "for i in range(0, n):\n",
+        "    ele = int(input())\n",
+        "  \n",
+        "    list_f.append(ele) # adding the element\n",
+        "\n",
+        "print('add list h elements')\n",
+        "\n",
+        "list_h = []\n",
+        "n = 9\n",
+        "for i in range(0, n):\n",
+        "    ele = int(input())\n",
+        "  \n",
+        "    list_h.append(ele) # adding the element\n",
+        "\n",
+        "\n",
+        "print(list_c)\n",
+        "print(list_f)\n",
+        "print(list_h)\n",
+        "\n",
+        "max_c = max(list_c)  #returns max value from list\n",
+        "max_f = max(list_f)\n",
+        "max_h = max(list_h)\n",
+        "\n",
+        "if max_c > max_f & max_c > max_h: #if max is c list\n",
+        "    m = max_c\n",
+        "elif max_f > max_c & max_f > max_h:  #if max is f list\n",
+        "    m = max_f\n",
+        "else:\n",
+        "    m = max_h  #if max is h list\n",
+        "\n",
+        "min_c = min(list_c)\n",
+        "min_f = min(list_f)\n",
+        "min_h = min(list_h)\n",
+        "\n",
+        "if min_c < min_f & min_c < min_h:\n",
+        "    n = min_c\n",
+        "elif min_f < min_c & min_f > min_h:\n",
+        "    n = min_f\n",
+        "else:\n",
+        "    n = min_h\n",
+        "\n",
+        "C = set(list_c)\n",
+        "F = set(list_f)\n",
+        "H = set(list_h)\n",
+        "A = set(range(n,m))\n",
+        "Y = (C&F&H)\n",
+        "print('output:')\n",
+        "print(sorted(list(Y)))\n",
+        "print(sorted(list((C&F)-H)))\n",
+        "print(sorted(list((C&F|C&H|F&H)-Y)))\n",
+        "print(sorted(list(A-(C|F|H))))"
+      ]
+    }
+  ]
+}
