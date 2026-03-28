@@ -1,5 +1,5 @@
-import Sections from "@/components/sections";
+import PremiumSections from "@/components/premium-sections";
 
 export default function HomePage() {
-  return <Sections />;
+  return <PremiumSections />;
 }
